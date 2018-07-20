@@ -1,0 +1,304 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tiki",
+		"_postman_id": "03be1b55-41a5-c94b-f591-20ed7a510ec8",
+		"description": "API Documentation about TIKI Module.\n\nRequirement:\n---\n- reSlim version 1.13.0\n- FlexibleConfig module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Info Module",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim-test/src/api/tiki/get/info/?apikey={yourapikey}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim-test",
+						"src",
+						"api",
+						"tiki",
+						"get",
+						"info",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get Info Module\n---\nGet info detail about Tiki Module"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/token/?apikey={yourapikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"token",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get Token\n---\nGet Token from server Official API Tiki."
+			},
+			"response": []
+		},
+		{
+			"name": "Info Connote",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/info/{no connote}/?apikey={your apikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"info",
+						"{no connote}",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{your apikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Info Connote\n---\nTo get info detail of connote (consignment note)."
+			},
+			"response": []
+		},
+		{
+			"name": "History Connote",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/history/{no connote}/?apikey={yourapikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"history",
+						"{no connote}",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "History Connote\n---\nTo get history shipment of connote (consigment note)."
+			},
+			"response": []
+		},
+		{
+			"name": "Option Status Code",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/statuscode/?apikey={yourapikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"statuscode",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Status Code\n---\nTo get data list of the status code are used in history connote."
+			},
+			"response": []
+		},
+		{
+			"name": "Area Info",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/areainfo/?apikey={yourapikey}&lang=en&query={name district or sub district}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"areainfo",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "query",
+							"value": "{name district or sub district}",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Area Info\n---\nThis is to get data list of area info.\n\nNote:\n---\n- This is commonly use to get tariff_code which is required to send request the Tariff Product API."
+			},
+			"response": []
+		},
+		{
+			"name": "Tariff Product",
+			"request": {
+				"url": {
+					"raw": "http://localhost:1337/reSlim/src/api/tiki/tariff/{origin_tariff_code}/{destination_tariff_code}/{weight}/?apikey={yourapikey}&lang=en",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"reSlim",
+						"src",
+						"api",
+						"tiki",
+						"tariff",
+						"{origin_tariff_code}",
+						"{destination_tariff_code}",
+						"{weight}",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{yourapikey}",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "lang",
+							"value": "en",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Tariff Product\n---\nGet the tariff product data of shipment in Tiki.\n\nNote:\n- You can get the **tariff_code** to be use for **origin** and **destination** from Area Info request."
+			},
+			"response": []
+		}
+	]
+}
