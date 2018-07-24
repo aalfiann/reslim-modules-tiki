@@ -15,3 +15,8 @@
 
 1. Make AJAX GET request to >>
     http://**{yourdomain.com}**/api/packager/install/zip/safely/**{yourusername}**/**{yourtoken}**/?lang=en&source=**{zip archive source}**&namespace=**{modul namespace}**
+
+### Requirement
+- This module is require **reSlim** minimum version **1.14.0**
+- This module is require module **FlexibleConfig** installed on reSlim
+- This module is using **Official API from Tiki Company** so this module is only works in localhost, if you want to get this online, you have to contact Tiki Company to whitelisting your ip address.
