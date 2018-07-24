@@ -19,4 +19,4 @@
 ### Requirement
 - This module is require **reSlim** minimum version **1.14.0**
 - This module is require module **FlexibleConfig** installed on reSlim
-- This module is using **Official API from Tiki Company** so this module is only works in localhost, if you want to get this online, you have to contact Tiki Company to whitelisting your ip address.
+- This module is using **Official API from Tiki Company** so this module is only works in localhost, if you want to get this online, you have to contact [Tiki Company](https://tiki.id) to whitelisting your ip address.
