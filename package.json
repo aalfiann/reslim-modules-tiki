@@ -5,7 +5,7 @@
         "description": "An alternative API for access data from TIKI (Citra Van Titipan Kilat, PT).",
         "version": "1.0",
         "require": {
-            "reSlim": "1.13.0"
+            "reSlim": "1.14.0"
         },
         "dependency": ["modules/flexibleconfig"],
         "license": {
