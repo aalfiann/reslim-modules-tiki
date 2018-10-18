@@ -3,7 +3,7 @@
         "name": "Tiki",
         "url": "https://github.com/aalfiann/reslim-modules-tiki",
         "description": "An alternative API for access data from TIKI (Citra Van Titipan Kilat, PT).",
-        "version": "1.0",
+        "version": "1.0.1",
         "require": {
             "reSlim": "1.14.0"
         },

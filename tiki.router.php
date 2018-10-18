@@ -26,14 +26,14 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
     // GET api for info connote
     $app->map(['GET','POST','OPTIONS'],'/tiki/info/{connote}/', function (Request $request, Response $response) {
-        $tiki = new Tiki($this->db);
-        $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
-        $tiki->connote = $request->getAttribute('connote');
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(300,["apikey","lang"])){
             $datajson = SimpleCache::load(["apikey","lang"]);
         } else {
+            $tiki = new Tiki($this->db);
+            $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
+            $tiki->connote = $request->getAttribute('connote');
             $datajson = SimpleCache::save($tiki->infoConnote(),["apikey","lang"]);
         }
         $body->write($datajson);
@@ -43,14 +43,14 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
     // GET api for history connote
     $app->map(['GET','POST','OPTIONS'],'/tiki/history/{connote}/', function (Request $request, Response $response) {
-        $tiki = new Tiki($this->db);
-        $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
-        $tiki->connote = $request->getAttribute('connote');
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(300,["apikey","lang"])){
             $datajson = SimpleCache::load(["apikey","lang"]);
         } else {
+            $tiki = new Tiki($this->db);
+            $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
+            $tiki->connote = $request->getAttribute('connote');
             $datajson = SimpleCache::save($tiki->historyConnote(),["apikey","lang"]);
         }
         $body->write($datajson);
@@ -60,13 +60,13 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
     // GET api for status code
     $app->map(['GET','POST','OPTIONS'],'/tiki/statuscode/', function (Request $request, Response $response) {
-        $tiki = new Tiki($this->db);
-        $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(86400,["apikey","lang"])){
             $datajson = SimpleCache::load(["apikey","lang"]);
         } else {
+            $tiki = new Tiki($this->db);
+            $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
             $datajson = SimpleCache::save($tiki->statusCode(),["apikey","lang"]);
         }
         $body->write($datajson);
@@ -76,14 +76,14 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
     // GET api for area info
     $app->map(['GET','POST','OPTIONS'],'/tiki/areainfo/', function (Request $request, Response $response) {
-        $tiki = new Tiki($this->db);
-        $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
-        $tiki->search = (empty($_GET['query'])?'':$_GET['query']);
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(86400,["apikey","lang","query"])){
             $datajson = SimpleCache::load(["apikey","lang","query"]);
         } else {
+            $tiki = new Tiki($this->db);
+            $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
+            $tiki->search = (empty($_GET['query'])?'':$_GET['query']);
             $datajson = SimpleCache::save($tiki->getArea(),["apikey","lang","query"]);
         }
         $body->write($datajson);
@@ -94,16 +94,16 @@ use \classes\SimpleCache as SimpleCache;                        //SimpleCache cl
 
     // GET api for tariff product
     $app->map(['GET','POST','OPTIONS'],'/tiki/tariff/{origin}/{destination}/{weight}/', function (Request $request, Response $response) {
-        $tiki = new Tiki($this->db);
-        $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
-        $tiki->origin = $request->getAttribute('origin');
-        $tiki->destination = $request->getAttribute('destination');
-        $tiki->weight = $request->getAttribute('weight');
         $body = $response->getBody();
         $response = $this->cache->withEtag($response, $this->etag.'-'.trim($_SERVER['REQUEST_URI'],'/'));
         if (SimpleCache::isCached(300,["apikey","lang"])){
             $datajson = SimpleCache::load(["apikey","lang"]);
         } else {
+            $tiki = new Tiki($this->db);
+            $tiki->lang = (empty($_GET['lang'])?$this->settings['language']:$_GET['lang']);
+            $tiki->origin = $request->getAttribute('origin');
+            $tiki->destination = $request->getAttribute('destination');
+            $tiki->weight = $request->getAttribute('weight');
             $datajson = SimpleCache::save($tiki->product(),["apikey","lang"]);
         }
         $body->write($datajson);
